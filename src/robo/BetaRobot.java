@@ -27,7 +27,8 @@ public class BetaRobot extends AlphaRobot {
         }else return true;
     }
     public boolean moveRight() {
-        if(checkCharge() && super.moveRight()) {
+
+        if(checkCharge() && super.direction("Right")) {
             setX(getX() + 1);
             charge--;
             return true;
@@ -36,7 +37,7 @@ public class BetaRobot extends AlphaRobot {
 
 
     public boolean moveLeft() {
-        if(checkCharge() && super.moveLeft()) {
+        if(checkCharge() && super.direction("Left")) {
             setX(getX() - 1);
             charge--;
             return true;
@@ -45,7 +46,7 @@ public class BetaRobot extends AlphaRobot {
 
 
     public boolean moveDown() {
-        if(checkCharge() && super.moveDown()) {
+        if(checkCharge() && super.direction("Down")) {
             setY(getY() + 1);
             charge--;
             return true;
@@ -54,7 +55,7 @@ public class BetaRobot extends AlphaRobot {
 
 
     public boolean moveUp() {
-        if(checkCharge() && super.moveUp()) {
+        if(checkCharge() && super.direction("Up")) {
             setY(getY() -1);
             charge--;
             return true;
