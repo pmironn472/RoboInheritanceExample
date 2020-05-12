@@ -12,7 +12,7 @@ public class DiagonalWalkTest {
             System.err.println("Diagonal moving test failed\nREASON: moveDownRight() out of bounds!");
             return percentage;
         }
-        percentage +=10;
+        percentage +=20;
 
         robot.setY(50);
         robot.setX(100);
@@ -30,7 +30,7 @@ public class DiagonalWalkTest {
             System.err.println("Diagonal moving test failed\nREASON: moveUpRight() out of bounds!");
             return percentage;
         }
-        percentage +=10;
+        percentage +=20;
 
         robot.setY(0);
         robot.setX(50);
@@ -60,8 +60,8 @@ public class DiagonalWalkTest {
 
 
 
-        robot.setY(0);
-        robot.setX(50);
+        robot.setY(50);
+        robot.setX(0);
         if (robot.moveUpLeft()) {
             System.err.println("Diagonal moving test failed\nREASON: moveUpLeft() out of bounds!");
             return percentage;
@@ -85,38 +85,8 @@ public class DiagonalWalkTest {
             System.err.println("Charge test failed\nREASON: The moving system should be calibrated!");
             return percentage;
         }
-        percentage += 5;
-
-        robot.setCharge(10);
-        robot.setY(50);
-        robot.setX(50);
-        while(robot.moveUpLeft());
-        if (robot.getCharge() > 5) {
-            System.err.println("Charge test failed\nREASON: The moving system should be calibrated!");
-            return percentage;
-        }
-        percentage += 5;
-
-        robot.setCharge(10);
-        robot.setY(50);
-        robot.setX(50);
-        while(robot.moveDownRight());
-        if (robot.getCharge() > 5 ) {
-            System.err.println("Charge test failed\nREASON: The moving system should be calibrated!");
-            return percentage;
-        }
-        percentage += 5;
-
-        robot.setCharge(10);
-        robot.setY(50);
-        robot.setX(50);
-        while(robot.moveUpRight());
-        if (robot.getCharge() > 5) {
-            System.err.println("Charge test failed\nREASON: The moving system should be calibrated!");
-            return percentage;
-        }
-        percentage += 5;
-
         return percentage;
+
+
     }
 }
